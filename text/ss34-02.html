@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 120px;
+            border: 1px solid rgb(166, 166, 166);
+            height: 30px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+
+        select {
+            border: 1px solid rgb(166, 166, 166);
+            height: 42px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+
+        form {
+            margin-bottom: 10px;
+        }
+
+        table {
+            font-size: 10px;
+            width: 100%;
+            border: none;
+        }
+
+        .thead {
+            background-color: rgb(221, 203, 203);
+        }
+
+        td {
+            border-bottom: 1px solid rgb(221, 203, 203);
+        }
+
+        #submitBtn {
+            height: 40px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            background-color: blue  ;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .mini {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<div>
+    <div class="container">
+        <h1>Task Management</h1>
+        <div class="mini">
+            <input type="text" id="content" placeholder="Content">
+            <input type="date" id="date">
+            <select name="status" id="status">
+                <option value selected disabled hidden>Choose status</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="DisApproved">Disapproved</option>
+            </select>
+            <input type="text" id="user" placeholder="Username">
+            <button id="submitBtn">Submit</button></div>
+        <table id="infoTable">
+            <tr class="thead">
+                <td><b>#</b></td>
+                <td><b>Content</b></td>
+                <td><b>Due date</b></td>
+                <td><b>Status</b></td>
+                <td><b>Assigned to</b></td>
+                <td><b>Action</b></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./ss34-02.js"></script>
+    </body>
+
+</html>
