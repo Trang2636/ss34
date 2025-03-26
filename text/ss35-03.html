@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        #input {
+            width: 1350px;
+            margin: 10px;
+            padding-left:10px  ;
+        }
+
+        #search {
+            color: white;
+            background-color: green;
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: none;
+        }
+
+        .card {
+            width: 18rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .card img {
+            width: 200px;
+            height: 138px;
+            border-radius: 8px;
+        }
+
+        #productsList {
+            display: flex;
+        }
+
+        #delete {
+            position: absolute;
+            right: 170px;
+            top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Search" id="input">
+    <span id="delete">X</span>
+    <button id="search" onclick="findProduct()">Search</button>
+
+    <div id="productsList"></div>
+    <script src="./ss35-03.js"></script>
+
+</body>
+
+</html>

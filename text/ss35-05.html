@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục</title>
+    <link rel="stylesheet" href="./ss35-05.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Danh mục</h1>
+        <button id="addCategoryBtn"><i class="fa-solid fa-plus"></i> Thêm mới danh mục</button>
+    </header>
+
+    <section class="add_filter">
+        <select id="filterStatus">
+            <option value="">Tất cả trạng thái</option>
+            <option value="Đang hoạt động">Đang hoạt động</option>
+            <option value="Ngừng hoạt động">Ngừng hoạt động</option>
+        </select>
+
+        <div class="search-container">
+            <input type="search" id="searchInput" placeholder="Tìm kiếm danh mục theo tên">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </section>
+
+    <table class="list">
+        <thead>
+            <tr>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody id="categoryList">
+            <!-- Render tại đây -->
+        </tbody>
+    </table>
+
+    <!-- Modal -->
+    <section id="categoryModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal"><i class="fa-solid fa-times"></i></span>
+            <h2 id="modalTitle">Thêm mới danh mục</h2>
+
+            <label>Mã danh mục</label>
+            <input type="text" id="categoryId" placeholder="Nhập mã danh mục">
+
+            <label>Tên danh mục</label>
+            <input type="text" id="categoryName" placeholder="Nhập tên danh mục">
+
+            <label>Trạng thái</label>
+            <div class="status-radio">
+                <label><input type="radio" name="status" value="Đang hoạt động" checked> Đang hoạt động</label>
+                <label><input type="radio" name="status" value="Ngừng hoạt động"> Ngừng hoạt động</label>
+            </div>
+
+            <div class="modal-btns">
+                <button id="cancelBtn">Hủy</button>
+                <button id="saveBtn">Thêm</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./ss35-05.js"></script>
+</body>
+
+</html>
